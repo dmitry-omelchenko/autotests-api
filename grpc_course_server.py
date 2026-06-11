@@ -12,7 +12,7 @@ class CourseServiceServicer(course_service_pb2_grpc.CourseServiceServicer):
 
     def GetCourse(self, request, context):
         """Метод GetUser обрабатывает входящий запрос"""
-        print(f'Получен запрос к методу GetCourse от пользователя: {request.course_id}')
+        print(f'Получен запрос к методу GetCourse с course_id: {request.course_id}')
 
         # Формируем и возвращаем ответное сообщение
         return course_service_pb2.GetCourseResponse(
