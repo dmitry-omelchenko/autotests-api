@@ -11,6 +11,9 @@ class CreateUserRequestDict(TypedDict):
     """
     email: str
     password: str
+    lastName: str
+    firstName: str
+    middleName: str
 
 
 class PublicUsersClient(APIClient):
