@@ -51,7 +51,7 @@ class UserSchema(BaseModel):
 
 
 class CourseSchema(BaseModel):
-    model_config = ConfigDict(alias_generator=to_camel, populate_by_name=True)
+    model_config = ConfigDict(alias_generator=to_camel, validate_by_name=True)
 
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     title: str = "Playwright"
