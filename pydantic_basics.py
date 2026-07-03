@@ -51,7 +51,7 @@ class UserSchema(BaseModel):
 
 
 class CourseSchema(BaseModel):
-    model_config = ConfigDict(alias_generator=to_camel, validate_by_name=True)
+    model_config = ConfigDict(alias_generator=to_camel, validate_by_name=True, validate_by_alias=True)
 
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     title: str = "Playwright"
@@ -76,7 +76,7 @@ course_default_model = CourseSchema(
         directory="courses"
     ),
     estimatedTime="1 week",
-    created_by_user=UserSchema(
+    createdByUser=UserSchema(
         id="user_id",
         email="user@gmail.com",
         lastName="Bond",
