@@ -100,7 +100,7 @@ course_dict = {
         "directory": "courses"
     },
     "estimatedTime": "1 week",
-    "created_by_user": {
+    "createdByUser": {
         "id": "user_id",
         "email": "user@gmail.com",
         "lastName": "Bond",
@@ -126,7 +126,7 @@ course_json = """
         "directory": "courses"
     },
     "estimatedTime": "1 week",
-    "created_by_user": {
+    "createdByUser": {
         "id": "user_id",
         "email": "user@gmail.com",
         "lastName": "Bond",
