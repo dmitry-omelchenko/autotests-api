@@ -22,7 +22,10 @@ class CreateUserRequestSchema(BaseModel):
     """
     Описание структуры запроса для создания юзера.
     """
-    model_config = ConfigDict(populate_by_name=True)
+    model_config = ConfigDict(
+        validate_by_name=True,
+        validate_by_alias=True
+    )
 
     email: EmailStr
     password: str
@@ -43,7 +46,10 @@ class UpdateUserRequestSchema(BaseModel):
     """
     Описание структуры запроса на обновление пользователя.
     """
-    model_config = ConfigDict(populate_by_name=True)
+    model_config = ConfigDict(
+        validate_by_name=True,
+        validate_by_alias=True
+    )
 
     email: EmailStr | None
     last_name: str | None = Field(alias="lastName")
